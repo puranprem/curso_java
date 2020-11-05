@@ -1,0 +1,7 @@
+*{
+   margin: 0px;
+   padding: 10px;
+   border-color: red;
+   border-width: 1px;
+   border-style: dotted;
+  }

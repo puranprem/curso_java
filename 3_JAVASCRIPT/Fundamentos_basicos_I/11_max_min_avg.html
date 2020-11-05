@@ -1,0 +1,35 @@
+<script>
+
+function maxMinAvg(arreglo){
+    var arrAux=[];
+    var suma=0;
+    var promedio=0;
+    var minimo=arreglo[0];
+    var maximo=arreglo[0];
+
+    for(var i =0; i < arreglo.length; i++){
+        if(maximo < arreglo[i]){
+            maximo = arreglo[i]
+        }
+        if(minimo > arreglo[i] ){
+            minimo = arreglo[i]
+        }
+        suma= suma + arreglo[i]
+    }
+    promedio = suma/arreglo.length
+    arrAux.push(maximo)
+    arrAux.push(minimo)
+    arrAux.push(promedio)
+
+    return arrAux
+
+}
+
+b= maxMinAvg([3,7,-1])
+console.log(b)
+
+
+
+
+
+</script>

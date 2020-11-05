@@ -1,0 +1,25 @@
+<script>
+
+//Negativos: Dado un array con múltiples valores, escribe una función que reemplace cualquier número negativo 
+//dentro del array por 0. Cuando el programa esté listo, el array no debiera contener números negativos
+// (ej: [1,5,10,-2] se convertirá en [1,5,10,0]).
+
+function negativosCero(x) {
+var arrayAux=[];
+    for (var index = 0; index < x.length; index++) {
+        if (x[index]>0) {
+            arrayAux.push (x[index])
+        }else {
+            
+            arrayAux.push (0)   
+        }
+    }
+        return arrayAux
+} 
+
+
+var z=negativosCero([1,5,10,-2])
+console.log (z)
+
+
+</script>

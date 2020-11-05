@@ -1,0 +1,21 @@
+<script>
+   // Encuentra el mayor (max): Dado un array con múltiples valores, escribe una función que devuelva 
+   //el número mayor (ej: para [-3,3,5,7] el número mayor (max) es 7). 
+
+
+function numMayor(array) {
+   mayor=0
+   for (var index = 0; index < array.length; index++) {
+      if (array[index]>mayor) 
+         mayor=array[index];
+      } 
+      return mayor
+   
+   
+}
+var m=numMayor([-3,3,5,7]);
+console.log (m)
+
+
+
+</script>

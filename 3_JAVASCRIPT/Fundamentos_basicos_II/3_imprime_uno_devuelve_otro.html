@@ -1,0 +1,25 @@
+<script>
+//Imprime (print) uno, devuelve (return) otro- Crea una función para un array de números.
+//La función debería imprimir (print) el penúltimo valor y devolver (return) el primer valor impar.
+
+
+
+function impUnoOtro(x){
+    console.log(x[x.length-2]);
+for (let index = 0; index < x.length; index++) {
+    if (x[index]%2==1) {
+        return x[index]
+    }
+    
+}
+}
+
+
+
+z=impUnoOtro([2,6,1,0,-2,8]);
+console.log(z);
+
+</script>
+
+
+

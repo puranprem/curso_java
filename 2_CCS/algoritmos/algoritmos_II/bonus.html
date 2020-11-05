@@ -1,0 +1,19 @@
+<html>
+
+<script>
+//Crea una función que entregue el elemento más grande (largest element) en un array.
+// Por ejemplo largestElement([1,30,5,7]) debiera dar como resultado 30.
+function largestElement(x) {
+var mayor = x[0];
+for(var i=0; i<x.length; i++) {
+    if (x[i]>mayor) {
+        mayor=x[i]
+        }
+}
+return mayor;
+}
+console.log(largestElement([1,30,5,7])); 
+
+</script>
+</html>
+

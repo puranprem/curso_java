@@ -1,0 +1,42 @@
+<script>
+//Consigue pares hasta 1000: Escribe una función que entregue la suma de todos los números 
+//pares del 1 al 1000 - Puedes usar un operador de módulo para este ejercicio. 
+
+
+function pares(x){
+  sumPares=0;  
+for (var index = 0; index <= x; index+=2) {
+    sumPares=sumPares+index
+    
+}return sumPares
+}
+
+var z=pares(1000);
+console.log (z);
+
+
+//opcion 2
+
+function pares(x){
+  sumPares=0;  
+for (var index = 1; index <= x; index++) {
+   if (index%2==0){
+    sumPares=sumPares+index;
+   }
+    
+}return sumPares
+}
+
+var z=pares(1000);
+console.log (z);
+
+
+</script>
+
+
+
+
+</script>
+
+
+

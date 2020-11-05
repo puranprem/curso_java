@@ -1,0 +1,54 @@
+*{
+    outline: 1px dotted pink;
+}
+.container{
+    width:900px;
+    height:auto;
+    margin: 10px;
+    padding: 10px;
+    background-color: saddlebrown;
+    
+}
+.top{
+width: 880px;
+height:20px;
+padding:5px;
+background-color: whitesmoke;
+}
+.top1,.top2{
+    width: 430px;
+    height:auto;
+    margin:0;
+    display: inline-block;
+}
+.top2{
+    text-align: right;
+}
+
+.content{
+    padding: 10px;
+}
+.img1{
+    width: 400px;
+    height: 263px;
+    display: inline-block;
+}
+.texto{
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+.icono{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+}
+
+.blog1{
+    width: 230px;
+    height:400px;
+    margin:5px;
+    display: inline-block
+}

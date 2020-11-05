@@ -1,0 +1,30 @@
+<script>
+
+//Imprime (print) el menor, devuelve (return) el mayor 
+// Crea una función que tome un array de números.
+// La función debería imprimir (print) el menor valor del array, y devolver (return) el mayor. 
+
+
+function print(x) {
+    var mayor=x[0];
+    var menor=x[0];
+    for (var index = 0; index < x.length; index++) {
+        if (mayor<x[index]) {
+            mayor=x[index];
+        }
+        if (menor>x[index]) {
+            menor=x[index];
+        }
+    }
+    console.log (menor)
+    return mayor 
+}
+
+mayor=print([3,6,1,0,-2,8])
+
+
+
+
+</script>
+
+

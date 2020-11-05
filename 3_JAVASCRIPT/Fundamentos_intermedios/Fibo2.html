@@ -1,0 +1,24 @@
+<script>
+
+    function fibonacci(x){
+    var anterior0=0 
+    var anterior1=1
+    var fibo=0
+    
+    console.log(anterior0)
+    console.log(anterior1)
+    for (var i = 0; i <x-1; i++) {
+        fibo=anterior0+ anterior1; //0+1
+        console.log (fibo);//1
+        anterior0=anterior1; //anterior0=1
+        anterior1=fibo;//1
+    
+        }
+    
+    }
+    f=fibonacci(7)
+    
+    
+    
+    
+    </script>

@@ -1,0 +1,27 @@
+<html>
+    <script>
+
+//Dado un array, mueve todos los valores un espacio de derecha a izquierda eliminando el primer valor y 
+//dejando un 0 para el último valor. Por ejemplo, moverAdelante([1,2,3]) debiera dar como resultado [2,3,0].
+
+function moverAdelante(array) {
+    var primero = array [0];
+    for (let index = 0; index < array.length-1; index++) {
+        array[index]=array[index+1];
+    
+    } 
+    array.pop();
+    array.push(0);
+    return array
+}
+
+console.log (moverAdelante([1,2,3]));
+
+//int primero = numeros[0];
+//int x;
+//for(x= 0; x<numeros.length-1; x++)
+// numeros[x] = numeros[x+1];
+//numeros[x]= primero;//
+    </script>
+</html>
+

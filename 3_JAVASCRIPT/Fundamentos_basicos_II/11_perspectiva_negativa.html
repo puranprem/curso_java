@@ -1,0 +1,26 @@
+<script>
+
+
+//Perspectiva: Negativa - Dado un array crear y devuelve uno nuevo que contenga todos los valores 
+//del array original, pero negativos (no simplemente multiplicando por -1). 
+//Dado [1,-3,5], devuelve [-1,-3,-5].
+
+function perNeg(array) {
+    var arrayAux=[]
+    for (let index = 0; index < array.length; index++) {
+        if (array[index]>0) {
+            arrayAux.push(array[index]*-1)
+        }else{
+            arrayAux.push(array[index])
+        } 
+    }
+    return arrayAux
+}
+console.log(perNeg([1,-3,5]));
+
+
+
+</script>
+
+
+

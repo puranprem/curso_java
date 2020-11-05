@@ -1,0 +1,23 @@
+.nav_pt{
+      margin-bottom: 30px;
+}
+.bg-dark{
+    background-color: rgb(174, 0, 255) !important;
+}
+.btn_pt{
+    margin:10px
+}
+
+.box{
+    display: inline-block;
+    margin: 10px;
+}
+.botones{
+    margin: 10px;
+}
+.formulario_pt{
+    margin:10px;
+}
+.container_pt{
+    margin-top: 30px;
+}

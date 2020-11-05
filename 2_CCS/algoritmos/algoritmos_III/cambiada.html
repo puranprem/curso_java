@@ -1,0 +1,23 @@
+<html>
+    <script>
+
+
+// Cuadra cada valor con un array dado, obteniendo el mismo array con valores cambiados..
+
+function squareValue(x){
+var arrayAux=[];
+        for (let index = 0; index < x.length; index++) {
+            var cuad=x[index]*x[index];
+        arrayAux.push(cuad);
+        
+    }
+return arrayAux;
+}
+var y = squareValue([1,2,3]);
+console.log(y); // should log [1,4,9]
+
+var y = squareValue([2,5,8]);
+console.log(y); // should log [4,25,64]
+
+    </script>
+</html>

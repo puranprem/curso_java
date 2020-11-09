@@ -16,8 +16,9 @@ console.log(Sum1toN(3))
 
 //devuelve la suma del primer y último número en el array
 function sumFirstLast(arr){
-var sumPriUl=arr[0]+arr[arr.length-1];
-console.log (sumPriUl);
+    var sumPriUl=arr[0]+arr[arr.length-1];
+    console.log (sumPriUl);
+    return sumPriUl
 }
 
 var z=sumFirstLast([5,3,8,-5]);

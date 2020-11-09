@@ -1,0 +1,23 @@
+<html>
+    <script>
+function sumMaxMin(array) {
+    var mayor=array[0];
+    var menor=array[0];
+    for (var index = 0; index < array.length; index++) {
+        if (array[index]>mayor){ 
+        mayor=array[index];
+        } 
+        if (array[index]<menor) {
+        menor=array[index] ;  
+        }
+    }
+    return mayor+menor;
+    
+    
+}
+
+var m=sumMaxMin([-2,-5,-10]);;
+console.log(m)
+
+    </script>
+</html>

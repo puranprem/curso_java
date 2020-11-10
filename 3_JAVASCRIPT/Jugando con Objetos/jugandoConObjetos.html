@@ -11,19 +11,49 @@
 //¿Cómo harías para imprimir el nombre de los mayores de edad?
 
 
-var users = [
-    {
-        name: "Michael", age:37
+
+
+
+
+    var users = [
+        {name: "Michael",age:37 
     }, 
-    {
-        name: "John", age:30
+        {name: "John", age:30 
     },
-    {
-        name: "David", age:27
+        {name: "David", age:27
     }
 ];
 
+console.log(users[1].age);
+console.log(users[0].name);
 
-console.log(users.age("John"));
+
+function printLoops(array) {
+    for (var index=0; index<array.length;index++) {
+    
+    console.log(array[index].name +" "+(array[index].age));
+    
+    }
+}
+
+printLoops(users);
+
+for (x of users) {
+    console.log(x.name +" "+x.age);
+}
+
+//function printLoops(array) {
+  //  if ((users[array].age)>=18) {
+ //       console.log(user[array].name)
+  //  }
+    
+//}
+//printLoops(users);*/
+
+
+
+
+
+
 </script>
 </html>

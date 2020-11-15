@@ -4,23 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funciones Jquery</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>>
-    </script>
-    <script>
-        $(document).ready(function(){//indica si se cargó el documento completo
-            
-            $(sd).click(function();
-            alert("Me hicieron click"); //genera una alerta
-        })
+    <style type="text/css">
 
+        .content{
+            height: auto;
+            width: 800px;   
+        }
+        .menu{
+            height:auto;
+            width: auto;
+            background-color: darkgray;           
+        }
+        
+        .flechas{
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .x{
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .home{
+            height: 30px;
+            width: 30px;
+            padding: 5px;
+            border-radius: 30px;
+            display: inline-block; 
+            margin-left: 15px;
+        }
+        .url{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        p{
+            text-align: center;
+            margin:0;
+        }
+        .buscador{
+            width: 70px;
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        #clickAqui #clickHide{
+            margin:30px;
+        }
+        .box{
+            height: auto;
+            width: auto; 
+            background-color:whitesmoke;  
+            margin-top: 5px;
+            text-align: center;
+            padding:15px;           
+        }
+
+        .box2{
+            vertical-align: middle;
+            height: auto;
+            width: auto; 
+            margin:14px;
+            padding: 10px;
+            text-align: center;
+        }
+        .box2Int{
+            text-align: center;
+            
+        }
+        #imgSlideDown{
+            height: 50px;
+            width: 50px;  
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .boton{
+            margin:5px;
+            display: inline-block;
+        }
+        
+
+
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+        <script>
     
-    </script>
+        $(document).ready(function(){
+
+            $( "#clickAqui" ).click(function() {
+                alert( "Gracias por hacer click en el botón" );
+            });
+        
+            $( "#clickHide" ).click(function() {
+                $( "#esconder" ).hide( "slow", function() {
+                    alert( "Animacion completada." );
+                });
+            });
+            $("#clickShow").click(function(){
+                $("#esconder").show("fast",function() {
+                    alert( "Estoy de regreso" );
+                });
+            });
+            $("#clicktogle").click(function(){
+                $(".box2Int").toggle("slow");
+            });
+            $("#clickSlideUp").click(function(){
+                $("#imgSlideDown").slideUp("slow");
+            });
+            $("#clickSlideDown").click(function(){
+                $("#imgSlideDown").slideDown("slow");
+            });
+            $("#clickFadeIn").click(function(){
+                $("#ejFadeInOut").fadeIn("slow");
+            });
+            $("#clickFladeOut").click(function(){
+                $("#ejFadeInOut").fadeOut("slow");
+            });
+            $("btRemoveClass").click(function(){
+                $(".div").removeClass("ejRemAgr").addClass("newClass");
+            })//pendiente de revisión.
+            $("#be").click(function(){
+                $("#pruebaAfBe2").before("<p>Test</p>");
+            });  //pendiente de revisión
+        });
+        </script>
+
+
+
+
+
 </head>
 <body>
-    <h1>Slide Down
-    </h1>
-    <p>es simplemente texto de relleno de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde la década de 1500, cuando un impresor desconocido tomó una galera de tipos y la mezcló para hacer un libro de muestras tipográfico. Ha sobrevivido no solo a cinco siglos, sino también al salto a la composición tipográfica electrónica, permaneciendo esencialmente sin cambios. Se popularizó en la década de 1960 con el lanzamiento de hojas de Letraset que contienen pasajes de Lorem Ipsum y, más recientemente, con software de autoedición como Aldus PageMaker que incluye versiones de Lorem Ipsum.
-    </p>
-    <input class="sd"type="button" value="SlideDown">
+
+    
+
+    
+<div class="content">
+    <div class="menu">
+        <p>My Jquery basic asignament</p>
+        <img class="flechas"src="flecha_izq.jpg" alt="flecha izq"><img class="flechas"src="Flecha_der.jpg" alt="flecha izq">
+        <img class="x"src="x.jpg" alt="x"><img class="home"src="home.jpg" alt="home">
+        <input class = "url" type="text" value="ingresa tu url">
+        <input class="buscador" type="text" value="Buscar">
+    </div>
+    
+    <div class="box">
+        <input id="clickAqui" type="button" value=".click">
+        <div class="box2">
+            <h1 class="box2Int">Ejemplo click/alert</h1>
+            <p class="box2Int">Al hacer click en el boton mustra una alerta</p>
+        </div>
+    </div>
+    <div class="box">
+        <input id="clickHide" type="button" value=".hide">
+        <input id="clickShow" type="button" value=".show">
+        <div class="box2">
+            <h1 id="esconder" class="box2Int ">Ejemplo Hide</h1>
+            <p class="box2Int esconder">Al hacer click en el boton me esconderé  y/o mostraré</p>
+        </div>
+    </div>
+    <div class="box"> <!--toggle-->
+        <input id="clicktogle" type="button" value=".togle">
+        <div class="box2">
+            <h1 class="box2Int esconder">Ejemplo Togle</h1>
+            <p class="box2Int esconder"> vincula dos o más controladores a los elementos coincidentes, para que se ejecuten en clics alternativos.</p>
+        </div>
+    </div>
+    <div class="box"> <!--slideDown/up-->
+        <input class="boton" id="clickSlideUp" type="button" value=".slide Up"><br>
+        <input class="boton" id="clickSlideDown" type="button" value=".slide Down"><br>
+        <img id="imgSlideDown" src="leo.jpg" alt="Foto Ejemplo">
+            <div class="box2">
+                <h1 class="box2Int">Ejemplo slideDown</h1>
+                <p class="box2Int">probando SlideDown</p>
+            </div>
+    </div>
+    <div class="box"> <!--fide/up-->
+        <input class="boton" id="clickFadeIn" type="button" value=".fadeIn"><br>
+        <input class="boton"id="clickFladeOut" type="button" value=".fadeOut"><br>
+            <div id="ejFadeInOut" class="box2">
+                <h1 class="box2Int">Ejemplo fade in/out</h1>
+                <p class="box2Int">Probando fade in/out</p>
+            </div>
+    </div>
+
+    <div class="box ejRemAgr"> <!--addClass/removeClass-->
+        <input class="boton" id="btRemoveClass" type="button" value=".removeClass"><br>
+        <input class="boton"id="btaddClass" type="button" value=".addClass"><br>
+            <div id="ejAddRemoveClass" class="box2">
+                <h1 class="box2Int">Ejemplo para remover y agregar una clase</h1>
+                <p class="box2Int">Clic en los botones para remover y agregar clase</p>
+            </div>
+    </div>
+
+    <div class="box "> <!--before/after-->
+        <input class="boton" id="be" type="button" value=".before"><br>
+        <input class="boton"id="af" type="button" value=".after"><br>
+            <div id="beforeAfter" class="box2">
+                <h1 class="box2Int">Ejemplo para usar Before/After</h1>
+                <p class="box2Int pruebaAfBe2">Clic en los botones para insertar antes y despues el texto.</p><br>
+            </div>
+    </div>
+    
+    
+    
+    
+
+    
+</div>
 </body>
 </html>

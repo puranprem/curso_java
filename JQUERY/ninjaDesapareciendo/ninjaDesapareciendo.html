@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Desapareciendo</title>
+    <style  type="text/css">
+        .content{
+            width: 450px;
+            height: auto;
+           margin: 5px;
+           text-align: center;
+        }
+
+    </style> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $( ".ninja" ).click(function() {
+                $( this ).hide("slow");
+                });
+                
+            $(".buttonRestore").click(function (){
+                $(".ninja").show("slow");
+            });
+        });
+
+    </script>
+</head>
+<body>
+        <div class="content">
+            <div class="box">
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+                <img class="ninja" src="ninja.jpg" width="100" height="100" />
+
+            </div>
+            <h2>Clic en el ninja para que desaparezca</h2>
+            <input class="buttonRestore" type="button" value="Restaurar">
+    </div><!--cierra content-->
+    
+
+</body>
+</html>

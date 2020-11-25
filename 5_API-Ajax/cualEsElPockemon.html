@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cuál es tu Pokemon?</title>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            for (index = 1; index <= 36; index++) {
+                var z = "http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + index + ".png";
+                $('#caja1').append("<img id=" + index + " src=" + z + ">");
+                console.log("<img src=" + z + ">");
+            }
+            $("img").click(function clk() {
+                var y = $(this).attr("id");
+                $.get("https://pokeapi.co/api/v2/pokemon/" + y + "/", function(res) {
+                    console.log(res);
+                    $("#pokemon").html("<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + y + ".png'>");
+                    $("#nombre").html("<h2>" + res.name + "<h2>");
+                    $("#tipo").html("<p>Tipo: " + res.types[0].type.name + "</p>");
+                    $("#altura").html("<p>Altura: " + res.height + "</p>");
+                    $("#peso").html("<p>Peso: " + res.weight + "</p>");
+                }, 'json')
+            })
+        }); //cierre de la fución
+    </script>
+    <style>
+        #content {
+            width: 100%;
+            height: 100%;
+            padding: 3%;
+            background-color: rgb(192, 204, 19);
+            display: inline-block;
+        }
+        
+        .cajaPokemon {
+            background-color: grey;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #caja1 {
+            width: 70%;
+            height: 100%;
+            padding: 3%;
+            background-color: rgb(17, 160, 17);
+            display: inline-block;
+        }
+        
+        #caja2 {
+            width: 16%;
+            height: 80%;
+            padding: 3%;
+            background-color: rgb(204, 19, 189);
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        h1 {
+            color: lavenderblush;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="content">
+        <div id="cajaPokemon">
+            <h1>¿Cual es tu Pockemon?</h1>
+            <div id="caja1">
+            </div>
+            <div id="caja2">
+                <p>Dale Click a tu Pockemon favorito para conocer su habilidades y más..</p>
+                <h2 id="nombre"></h2>
+                <div id="pokemon">
+                </div>
+                <p id="tipo"></p>
+                <p id="altura"></p>
+                <p id="peso"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

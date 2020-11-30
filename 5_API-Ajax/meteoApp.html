@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo App</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(' #boton').click(function() {
+                url = "http://api.openweathermap.org/data/2.5/weather?q=" + $('#city').val() + "&APPID=e5a77e3925861fa4205664d3a224f7a3&units=metric";
+
+                console.log(url);
+                $.get(url, function(res) {
+                    console.log(res);
+                    $("#ubicacion").html("<p>Ciudad:<br>" + res.name + "</p>");
+                    $("#temperatura").html("<p>Temperatura:<br>" + res.main.temp + "°</p>");
+                    $("#coordenadas").html("<p>Coordenadas:<br>" + res.coord.lat + " , " + res.coord.lon + "</p>");
+                }, 'json');
+                // don't forget to return false so the page doesn't refresh
+                //  return false;
+            });
+        });
+
+
+        // api.openweathermap.org/data/2.5/weather?q={city name}&appid={df53c4de526569027b103032db2a86ed}
+    </script>
+    <style>
+        #content {
+            height: auto;
+            width: 250px;
+            margin: 20px;
+            background-color: coral;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='content'>
+        <div>
+            <label for="city">Ciudad</label><br><br>
+            <input type="text" id="city" name="city"><br>
+            <input id="boton" type="button" value="consultar">
+        </div>
+        <h3 id="ubicacion"></h3>
+        <h3 id="temperatura"></h3>
+        <h3 id="coordenadas"></h3>
+    </div>
+
+    <!--apy key df53c4de526569027b103032db2a86ed Default-->
+
+
+</body>
+
+</html>

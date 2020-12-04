@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Jquery codigo facilito </title>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#parrafo").css({
+                "background-color": "red",
+                "text-align": "center",
+            });
+            if ($('#parrafo').hasClass('saludo')) {
+                alert('si tiene la clase saludo');
+                $('#parafo').removeClass('saludo');
+            } else {
+                alert('no tiene la clase saludo');
+                $(div).addClass('hola');
+            }
+
+
+        }); //cierre de la fución
+    </script>
+
+    <style>
+        /*<!-- ponera aca el estilo-->*/
+    </style>
+</head>
+
+<body>
+    <h1 class="saludo">Hola Código facilito</h1>
+    <div>;)</div>
+    <p id="parrafo">Saludos a todos</p>
+
+</body>
+
+</html>

@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad Less</title>
     <link rel="stylessheet/less" type="text/css" href="Actividad_less.css">
-    
+    <script src="//cdn.jsdelivr.net/npm/less"></script>
+
+
 </head>
+
 <body>
-    
+    <h2>The name Attribute</h2>
+
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" value="John"><br><br>
+        <input id="submitfrm" ype=" submit " value="Submit ">
+    </form>
+
+    <p>If you click the "Submit " button, the form-data will be sent to a page called "/action_page.php ".</p>
+
+    <p>Notice that the value of the "First name " field will not be submitted, because the input element does not have a name attribute.</p>
+
 </body>
+
 </html>

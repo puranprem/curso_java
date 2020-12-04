@@ -1,0 +1,5 @@
+for (let i = 0; i < array.length; i++) { //desde la posición  cero en adelante
+
+}
+
+for (var i = array.length - 1; i >= 0; i--) { //desde el untimo elemento hacia la posición 0

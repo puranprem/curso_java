@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Pokemon" content="actividad API">
+    <title>Pokemon</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            for (var i = 1; i <= 30; i++) {
+                var a = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + i + ".png";
+                $("#pokemons").append("<img id=" + i + " src=" + a + ">");
+                console.log("<img src=" + a + ">");
+            }
+            $("img").click(function clikeo() {
+                var b = $(this).attr("id");
+                $.get(" https://pokeapi.co/api/v2/pokemon/" + b + "/", function(res) {
+                    console.log(res);
+                    $("#pokemon").html("<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + b + ".png'>");
+                    $("#nombre").html("<h2>" + res.name + "<h2>");
+                    $("#tipo").html("<p>Tipo: " + res.types[0].type.name + "</p>");
+                    $("#altura").html("<p>Altura: " + res.height + "</p>");
+                    $("#peso").html("<p>Peso: " + res.weight + "</p>");
+                }, 'json');
+            });
+        });
+    </script>
+    <style>
+        #contenedor {
+            background-color: rgb(81, 226, 81);
+            height: 100%;
+            padding: 20px 40px;
+            text-align: center;
+        }
+        
+        #pokemons {
+            display: inline-table;
+            width: 70%;
+            vertical-align: top;
+        }
+        
+        #info {
+            width: 200px;
+            height: 300px;
+            background-color: blanchedalmond;
+            border: 10px solid rgb(9, 61, 9);
+            padding: 10px;
+            display: inline-table;
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            vertical-align: top;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <h1>Pokemon</h1>
+        <div id="pokemons">
+        </div>
+        <div id="info">
+            <h2 id="nombre"></h2>
+            <div id="pokemon">
+            </div>
+            <p id="tipo"></p>
+            <p id="altura"></p>
+            <p id="peso"></p>
+        </div>
+    </div>
+</body>
+
+</html>

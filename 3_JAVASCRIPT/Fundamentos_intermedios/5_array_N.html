@@ -5,15 +5,15 @@
 // Si el array es muy pequeño, devuelve null. 
 
 function nUltimo(array,n) {
-    if (array.length<2) {
-        console.log("null")
+    if (array.length<n) {
+        return null;
     }else{
-        z=(array.length-(n+1))
+        return array[array.length-n]
     }
-    return z;
+    
 }
 var z=nUltimo([5,2,3,6,4,9,7],3);
-console.log(array[z]);
+console.log(z);
 
     </script>
 </html>

@@ -92,9 +92,9 @@
             <div class="brick"></div>   
         </div>
     
-        // list of features to buil
+        <!--  list of features to buil
         1) have JS display world of brick/coin/etc
-        2) have the pacman move up and down
+        2) have the pacman move up and down -->
 
         
         <script>
@@ -116,16 +116,9 @@
             var output ="";
 
             for (var i = 0; i < world.length; i++) {
-                output += "<div class "row">";
-                for (var j = 0; j < world[i].length; j++) {
-                    if(world[i][j] == 2)
-                        output += "<div class="brick"></div";
-                        else if(world[i][j] == 1)
-                            output += "<div class="coin"></div";
-                        if(world[i][j] == 2)
-                            output += "<div class="empty"></div";
-                }
-                output += "</div>";
+                for (var j = 0; j < world[i].length; j++){
+                    output = output + world[i][j];
+                    }
             }
             console.log (output);
         }

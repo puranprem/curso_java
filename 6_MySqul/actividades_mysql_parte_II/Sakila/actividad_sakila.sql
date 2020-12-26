@@ -161,3 +161,6 @@ inner join category on film_category.category_id = category.category_id
 inner join film_actor on film.film_id = film_actor.film_id
 inner join actor on actor.actor_id  = film_actor.actor_id
 where category.name ='Action'and actor.first_name='Sandra'and actor.last_name ='Kilmer'
+
+
+-- where city.city_id in (1,42,312,459) and customer.store_id=1;

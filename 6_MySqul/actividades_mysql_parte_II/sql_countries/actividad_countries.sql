@@ -12,8 +12,7 @@ SELECT * FROM `languages` JOIN countries ON countries.id = `languages`.`country_
 
 -- finalmente:.....chrarannnnn
 SELECT `countries`.`name`,`languages`.`language`,`languages`.`percentage`
-FROM `languages`
-JOIN `countries` ON countries.id = `languages`.`country_id`
+FROM `languages` JOIN `countries` ON countries.id = `languages`.`country_id`
 WHERE `language` = 'Slovene' 
 ORDER BY `language` asc
 

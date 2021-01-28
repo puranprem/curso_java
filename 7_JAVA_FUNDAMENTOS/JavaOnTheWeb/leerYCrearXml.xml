@@ -1,0 +1,30 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <desayuno>desayuno</desayuno>
+    
+    <Jugos>
+        <Naural>simpleServlet</Natural>
+        <Botella>org.codingdojo.tutorial.SimpleServlet</Botella>
+    </Jugos>
+    
+    <fondo>
+        <tostadas>Tostadas trigo integral</tostadas>
+        <otro>palta</otro>
+    </fondo>
+
+
+    <almuerzo>desayuno</almuerzo>
+    
+    <Jugos>
+        <Naural>simpleServlet</Natural>
+        <Botella>org.codingdojo.tutorial.SimpleServlet</Botella>
+    </Jugos>
+    
+    <fondo>
+        <plato>Guioso de Acelga</plato>
+        <guranicion>Papas al vapor con romero</uranicion>
+    </fondo>
+    
+    
+</menu>

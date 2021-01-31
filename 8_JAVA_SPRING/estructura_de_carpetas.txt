@@ -1,0 +1,17 @@
+├── src
+│   ├── main (donde estarán MVC, las plantillas, y los recursos estáticos)
+│   │   ├── java 
+│   │   │   └── com
+│   │   │       └── codingdojo
+│   │   │           └── firstproject
+│   │   │               └── FirstprojectApplication.java
+│   │   └── resources
+│   │       ├── application.properties
+│   │       ├── static
+│   │       └── templates
+│   └── test (donde estará el código de prueba)
+│       └── java
+│           └── com
+│               └── codingdojo
+│                   └── firstproject
+│                       └── FirstprojectApplicationTests.java

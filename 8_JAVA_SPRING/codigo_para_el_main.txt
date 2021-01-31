@@ -1,0 +1,13 @@
+@SpringBootApplication
+@RestController
+public class FirstProyectApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FirstProyectApplication.class, args);
+	}
+	
+	@RequestMapping("/")
+	public String hello() {
+		return "Hellow World";
+	}
+}
